@@ -112,58 +112,58 @@ const sendBtn = document.getElementById('sendBtn');
 
 const survey = {
     q1: {
-        question: "Halo! Terima kasih sudah memilih IKEA. 😊 Apakah Anda pernah berbelanja di IKEA sebelumnya?",
+        question: "Halo! Terima kasih sudah memilih 3Code. 😊 Apakah Anda pernah menggunakan layanan 3Code sebelumnya?",
         options: ["Yes", "No"],
         next: () => "q2"
     },
     q2: {
-        question: "Bagaimana Anda menilai kualitas produk IKEA?",
-        options: ["Sangat Baik", "Baik", "Biasa", "Buruk"],
+        question: "Jenis layanan apa yang Anda gunakan dari 3Code?",
+        options: ["Pemasangan CCTV", "Pemasangan Alarm", "Akses Kontrol", "Lainnya"],
         next: () => "q3"
     },
     q3: {
-        question: "Bagaimana Anda menilai harga produk IKEA?",
-        options: ["Sangat Terjangkau", "Cukup Terjangkau", "Mahal"],
+        question: "Bagaimana Anda menilai kualitas pemasangan yang dilakukan oleh teknisi kami?",
+        options: ["Sangat Baik", "Baik", "Biasa", "Buruk"],
         next: () => "q4"
     },
     q4: {
-        question: "Bagaimana pelayanan staf di toko menurut Anda?",
-        options: ["Sangat Baik", "Baik", "Biasa", "Buruk"],
+        question: "Bagaimana Anda menilai kecepatan pelayanan kami?",
+        options: ["Sangat Cepat", "Cukup Cepat", "Lambat"],
         next: () => "q5"
     },
     q5: {
-        question: "Apakah Anda merasa mudah menemukan barang di toko?",
+        question: "Apakah staf kami ramah & membantu selama proses pemasangan?",
         options: ["Ya", "Tidak"],
         next: () => "q6"
     },
     q6: {
-        question: "Bagaimana Anda menilai kenyamanan area pameran toko?",
-        options: ["Sangat Nyaman", "Nyaman", "Kurang Nyaman"],
+        question: "Apakah Anda puas dengan penjelasan cara penggunaan sistem keamanan?",
+        options: ["Sangat Puas", "Puas", "Kurang Puas"],
         next: () => "q7"
     },
     q7: {
-        question: "Bagaimana pengalaman Anda di kasir?",
-        options: ["Cepat & Ramah", "Cukup", "Lambat"],
+        question: "Apakah peralatan yang kami pasang berfungsi baik tanpa masalah?",
+        options: ["Ya", "Tidak"],
         next: () => "q8"
     },
     q8: {
-        question: "Apakah Anda pernah menggunakan layanan pengantaran IKEA?",
-        options: ["Yes", "No"],
-        next: (answer) => answer.toLowerCase() === "yes" ? "q9" : "q10"
+        question: "Apakah Anda merasa biaya layanan kami sebanding dengan kualitasnya?",
+        options: ["Sangat Sepadan", "Cukup Sepadan", "Tidak Sepadan"],
+        next: () => "q9"
     },
     q9: {
-        question: "Jika pernah, bagaimana pengalaman Anda dengan pengantaran?",
-        options: ["Sangat Baik", "Baik", "Biasa", "Buruk"],
+        question: "Jika Anda mengalami masalah, apakah tim kami cepat menanggapi?",
+        options: ["Sangat Cepat", "Cukup Cepat", "Lambat"],
         next: () => "q10"
     },
     q10: {
-        question: "Seberapa besar kemungkinan Anda merekomendasikan IKEA ke teman/keluarga?",
+        question: "Seberapa besar kemungkinan Anda merekomendasikan 3Code kepada teman/kerabat?",
         options: ["Sangat Besar", "Cukup Besar", "Kecil"],
         next: null
     }
-
 };
 
+    
 let currentQ = "q1";
 let waitingForAnswer = false;
 
